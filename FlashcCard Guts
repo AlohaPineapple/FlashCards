@@ -1,6 +1,6 @@
 /*Robert Kuakini
 Created: September 9, 2015
-Last Updated: September 18, 2015
+Last Updated: September 21, 2015
 */
 import java.util.ArrayList;
 import java.util.Random;
@@ -15,7 +15,7 @@ public class FlashCards{
    ArrayList<String> qS = new ArrayList();
    
    String a1 = "What is 2+2";
-   String a2 = "What yeat did 9/11 happen?";
+   String a2 = "What year did 9/11 happen?";
    String a3 = "When did WW2 end?";
    String a4 = "Who is the current president?";
    String a5 = "Is LCC big?";
@@ -25,12 +25,7 @@ public class FlashCards{
    qS.add(a3);
    qS.add(a4);
    qS.add(a5);
-   
-   /*Random generator to select question from array
-   Random rn = new Random();
-   int rQ = rn.nextInt(qS.size()) + 1;
-   */
-   
+        
    /*Stores answers to questions in ArrayList*/
    ArrayList<String> aS = new ArrayList();
    
@@ -61,9 +56,34 @@ public class FlashCards{
    dS.add(a4);
    dS.add(a5);
    
+   //Random generator to select question from array
+   Random rn = new Random();
+   int rQ = rn.nextInt(qS.size()) + 1;
+   
+   /*Stores correct and 3 wrong answers*/
+   ArrayList<String> cS = new ArrayList();
+   
+   String correctCheck = qS.get(rQ);
+   
+   
+   for(int i =0; i<4; i++){
+   //Random generator to select choice from array
+   int rC = rn.nextInt(qS.size());
+   
+   
+   cS.add(aS.get(rC));
+   //System.out.println(cS.get(i));
+   //System.out.println(rC);
+   }
    
    /*Mini flashgame*/
-   System.out.println("This is a Mini
+   System.out.println("This is a Mini Game!");
+   System.out.println("--------------------");
+   System.out.println("Question: ");
    
+   for(int i =0; i<4; i++){
+   //System.out.println("Choices #"+i+" :" + cS.get(rQ));
+   }
+    
    }
 }
