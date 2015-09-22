@@ -3,87 +3,87 @@ Created: September 9, 2015
 Last Updated: September 21, 2015
 */
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 
 public class FlashCards{
    public static void main (String [] args){
+      
+      
    
-   
+      /* Stores questions into Array list */
+      //Declares an Array of strings; Use for Storing questions
+      ArrayList<String> qS = new ArrayList();
+      
+      String a1 = "What is 2+2";
+      String a2 = "What year did 9/11 happen?";
+      String a3 = "When did WW2 end?";
+      String a4 = "Who is the current president?";
+      String a5 = "Is LCC big?";
+      //Adds to answer array list
+      qS.add(a1);
+      qS.add(a2);
+      qS.add(a3);
+      qS.add(a4);
+      qS.add(a5);
+           
+      /*Stores answers to questions in ArrayList*/
+      ArrayList<String> aS = new ArrayList();
+      
+      String b1 = "4";
+      String b2 = "2001";
+      String b3 = "1945";
+      String b4 = "Obama";
+      String b5 = "Yes";
+      //Adds to answer array list
+      aS.add(b1);
+      aS.add(b2);
+      aS.add(b3);
+      aS.add(b4);
+      aS.add(b5);
+      
+      /*Stores dictionary to questions in ArrayList*/
+      ArrayList<String> dS = new ArrayList();
+      
+      String d1 = "Simple Math";
+      String d2 = "It happened";
+      String d3 = "USA USA USA";
+      String d4 = "We want change";
+      String d5 = "It's mostly big";
+      //Adds to answer array list
+      dS.add(d1);
+      dS.add(d2);
+      dS.add(d3);
+      dS.add(d4);
+      dS.add(d5);
+      
+      //Random generator to select question from array
+      Random rn = new Random();
+      int rQ = rn.nextInt(qS.size()) + 1;
+      
+      /*Stores correct and 3 wrong answers*/
+      ArrayList<String> cS = new ArrayList();
+      
+      String correctCheck = qS.get(rQ);
+      
+      /*Stores 4 unique choices*/
+      for(int i =0; i<3;i++){
+        //Random generator to select choice from array
+         //int rC = new rn.nextInt(qS.size());
+         //String sC = Collections.shuffle(aS);
+         cS.add(aS.get(rn.nextInt(qS.size())));
+         System.out.println(cS.get(i));
 
-   /* Stores questions into Array list */
-   //Declares an Array of strings; Use for Storing questions
-   ArrayList<String> qS = new ArrayList();
-   
-   String a1 = "What is 2+2";
-   String a2 = "What year did 9/11 happen?";
-   String a3 = "When did WW2 end?";
-   String a4 = "Who is the current president?";
-   String a5 = "Is LCC big?";
-   //Adds to answer array list
-   qS.add(a1);
-   qS.add(a2);
-   qS.add(a3);
-   qS.add(a4);
-   qS.add(a5);
-        
-   /*Stores answers to questions in ArrayList*/
-   ArrayList<String> aS = new ArrayList();
-   
-   String b1 = "4";
-   String b2 = "2001";
-   String b3 = "1945";
-   String b4 = "Obama";
-   String b5 = "Yes";
-   //Adds to answer array list
-   aS.add(a1);
-   aS.add(a2);
-   aS.add(a3);
-   aS.add(a4);
-   aS.add(a5);
-   
-   /*Stores dictionary to questions in ArrayList*/
-   ArrayList<String> dS = new ArrayList();
-   
-   String d1 = "Simple Math";
-   String d2 = "It happened";
-   String d3 = "USA USA USA";
-   String d4 = "We want change";
-   String d5 = "It's mostly big";
-   //Adds to answer array list
-   dS.add(a1);
-   dS.add(a2);
-   dS.add(a3);
-   dS.add(a4);
-   dS.add(a5);
-   
-   //Random generator to select question from array
-   Random rn = new Random();
-   int rQ = rn.nextInt(qS.size()) + 1;
-   
-   /*Stores correct and 3 wrong answers*/
-   ArrayList<String> cS = new ArrayList();
-   
-   String correctCheck = qS.get(rQ);
-   
-   
-   for(int i =0; i<4; i++){
-   //Random generator to select choice from array
-   int rC = rn.nextInt(qS.size());
-   
-   
-   cS.add(aS.get(rC));
-   //System.out.println(cS.get(i));
-   //System.out.println(rC);
-   }
-   
-   /*Mini flashgame*/
-   System.out.println("This is a Mini Game!");
-   System.out.println("--------------------");
-   System.out.println("Question: ");
-   
-   for(int i =0; i<4; i++){
-   //System.out.println("Choices #"+i+" :" + cS.get(rQ));
-   }
-    
+      }
+      
+      /*Mini flashgame*/
+      System.out.println("This is a Mini Game!");
+      System.out.println("--------------------");
+      System.out.println("Question: ");
+      
+      for(int i =0; i<4; i++){
+        //System.out.println("Choices #"+i+" :" + cS.get(rQ));
+      }
+       
    }
 }
